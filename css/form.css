@@ -1,0 +1,141 @@
+:root {
+    --primary-color :  hsl(231, 69%, 60%);
+    --secondary-color: hsl(0, 94%, 66%);
+    --neutral-color: hsl(0, 0%, 97%);
+    --dark-color: hsl(229, 31%, 21%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+* {
+    
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--primary-color);
+}
+.container form {
+    margin: 0 auto;
+    padding: 20px;
+    background:var(--neutral-color);
+    border: 1px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+}
+.container form fieldset {
+    border-radius: 5px;
+    padding: 25px 20px 10px;
+    /* margin-bottom: 10px; */
+}
+form .form-field {
+    margin-bottom: 20px;
+}
+form input {
+    width: 100%;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline-color: var(--primary-color);
+    padding: 8px 5px;
+}
+
+::placeholder {
+    color: var(--dark-color);
+}
+form h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+form .btn {
+    background: var(--secondary-color);
+    border: 1px solid;
+    color: var(--neutral-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    /* margin: auto; */
+}
+form .btn:hover {
+    background: var(--neutral-color);
+    border:1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+form small {
+    color: var(--secondary-color);
+    font-size: 0.8em;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+}
+/* .form-grid .form-field small {
+    text-align: left;
+} */
+
+form .account {
+    padding: 10px;
+    color: var(--dark-color);
+}
+form .account a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+form .account a:hover{
+    color: var(--secondary-color);
+}
+form > p {
+    margin: 20px 0;
+}
+
+.success {
+    border-color: var(--dark-color);
+}
+.error {
+    border-color: var(--secondary-color);    
+}
+#loader {
+    display: none;
+    font-size: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    .container form {
+        width: 40%;
+    }
+
+    /* .container form fieldset {
+        margin: 20px;
+    } */
+    form .form-field {
+        margin: 30px;
+    }
+    .form-grid .form-field {
+        margin-bottom: 0;
+       /* width: 100%;
+         margin: auto; */
+    }
+    .form-grid .form-field input {
+        
+    }
+}
