@@ -88,9 +88,6 @@ form small {
     gap: 10px;
     
 }
-/* .form-grid .form-field small {
-    text-align: left;
-} */
 
 form .account {
     padding: 10px;
@@ -124,18 +121,12 @@ form > p {
         width: 40%;
     }
 
-    /* .container form fieldset {
-        margin: 20px;
-    } */
     form .form-field {
         margin: 30px;
     }
     .form-grid .form-field {
         margin-bottom: 0;
-       /* width: 100%;
-         margin: auto; */
+
     }
-    .form-grid .form-field input {
-        
-    }
+
 }

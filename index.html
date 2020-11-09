@@ -7,16 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
-    <title>Bookmark</title>
+    <title>Bookmark | Frontend Mentors</title>
 </head>
 <body>
     <header class="header">
         <div class="navbar flex">
-            <a class="logo">
+            <a class="logo" href="index.html">
                 <img src="images/logo-bookmark.svg" alt="">
             </a>
 
-            <img class="hamburger" class="" src="images/icon-hamburger.svg" alt="">
+            <img class="hamburger" src="images/icon-hamburger.svg" alt="">
 
             <nav class="nav-items flex">
                 <ul class="flex">
@@ -44,7 +44,7 @@
     <main>
         <section class="bookmark grid">
             <div class="simple-bookmark">
-                <h1>A simple Bookmark Manager</h1>
+                <h1>A Simple Bookmark Manager</h1>
                 <p class="text bookmark-text">
                     A clean and simple interface to organize your favourite websites. 
                     Open a new browser tab and see your sites instantly. Try it for free.
@@ -57,6 +57,7 @@
             </div>
             
             <img src="images/illustration-hero.svg" alt="">
+            
         </section>
     
         <section class="features flex">
@@ -211,14 +212,14 @@
 
     <footer class="footer">
         <section class="up-to-date text-center">
-            <small>35, 000 &plus; ALREADY JOINED</small>
+            <small id="joined">35, 000 &plus; ALREADY JOINED</small>
             <h2 class="stay">Stay up-to-date with what we're doing</h2>
             
             <div class="contact">
                 <form class="flex" onsubmit="return false" name="contactForm">
                     <div class="form-input">
                         <input type="email" name="contactmail"  id="contact-email" placeholder="Enter your email address">
-                        <small id="small"></small>
+                        <small id="" class ='small'></small>
                     </div>
                     
                     <button class="btn btn-danger" onclick="return validateContactMail(document.contactForm.contactmail)">Contact Us</button>
@@ -229,7 +230,11 @@
         <section class="bg-dark">
             <div class="footer-bar flex">
                 <nav class="flex">
-                    <div class="logo"><img src="images/logo-bookmark.svg" alt=""></div>
+                    <div class="logo">
+                        <a href='index.html'>
+                            <img src="images/logo-footer.svg" alt="">
+                        </a>
+                    </div>
                 
                     <ul class="flex">
                         <li class="nav-link"><a href="">FEATURES</a></li>

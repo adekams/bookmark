@@ -55,8 +55,8 @@ const firstTab = document.querySelector('#first-tab')
 const secondTab = document.querySelector('#second-tab')
 const thirdTab = document.querySelector('#third-tab')
 
-//tab1
-firstTab.addEventListener('click', () => {
+
+const openTabOne = () => {
     tab1.style.display = 'grid';
     tab2.style.display = 'none';
     tab3.style.display = 'none';
@@ -64,10 +64,9 @@ firstTab.addEventListener('click', () => {
     firstTab.style.borderBottom = '5px solid hsl(0, 94%, 66%)';
     secondTab.style.borderBottom = 'none';
     thirdTab.style.borderBottom = 'none';
-})
+} 
 
-//tab2
-secondTab.addEventListener('click', () => {
+const openTabTwo = () => {
     tab1.style.display = 'none';
     tab2.style.display = 'grid';
     tab3.style.display = 'none';
@@ -75,10 +74,9 @@ secondTab.addEventListener('click', () => {
     firstTab.style.borderBottom = 'none';
     secondTab.style.borderBottom = '5px solid hsl(0, 94%, 66%)';
     thirdTab.style.borderBottom = 'none';
-})
+}
 
-//tab 3
-thirdTab.addEventListener('click', () => {
+const openTabThree = () => {
     tab1.style.display = 'none';
     tab2.style.display = 'none';
     tab3.style.display = 'grid';
@@ -86,25 +84,46 @@ thirdTab.addEventListener('click', () => {
     firstTab.style.borderBottom = 'none';
     secondTab.style.borderBottom = 'none';
     thirdTab.style.borderBottom = '5px solid hsl(0, 94%, 66%)';
-})
+}
+
+
+//tab1
+firstTab.addEventListener('click', openTabOne)
+
+//tab2
+secondTab.addEventListener('click', openTabTwo)
+
+//tab 3
+thirdTab.addEventListener('click', openTabThree)
 
 
 //contact us email validation
 
 let contactMail = document.querySelector('#contact-mail')
-let small = document.getElementById('small')
+let small = document.querySelector('.small')
 const formInput = document.querySelector('.form-input')
-function validateContactMail (email) {
+
+const validateContactMail = (email) => {
     let mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if(email.value.match(mail)){
-        small.style.display = 'block';
-        small.style.background = 'hsl(231, 69%, 60%)';
+    if(!email.value){
+        formInput.style.border = '1px solid hsl(0, 94%, 66%)'
+        small.classList.remove('success')
+        small.classList.toggle('small-bg')
+        small.textContent = "email cannot be empty";
+        return false
+    }
+    else if(email.value.match(mail)){
+        formInput.style.border = 'none'
+        small.classList.toggle('small-bg')
+        small.classList.add('success')
         small.textContent = "Success!";
         return true;
     }
     else{
-        small.style.display = 'block';
+        formInput.style.border = '1px solid hsl(0, 94%, 66%)'
+        small.classList.remove('success')
+        small.classList.add('small-bg')   
         small.textContent = "whoops! make sure it's an email";
         return false
     }
