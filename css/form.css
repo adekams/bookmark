@@ -45,7 +45,7 @@ form .form-field {
 }
 form input {
     width: 100%;
-    background: #eee;
+    background: var(--neutral-color);
     border: 1px solid #ddd;
     border-radius: 5px;
     outline-color: var(--primary-color);
@@ -57,6 +57,7 @@ form input {
 }
 form h2 {
     font-size: 2em;
+    font-weight: 500;
     margin-bottom: 15px;
     color: var(--secondary-color);
 }

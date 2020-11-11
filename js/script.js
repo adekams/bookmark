@@ -12,9 +12,9 @@ navToggle.addEventListener('click', () => {
     document.querySelector('.navbar').classList.toggle('navbar-dark')
 
     if(mainNav.classList.contains('nav-toggleShow')) {
-        navToggle.src = "../images/icon-close.svg";    
+        navToggle.src = "images/icon-close.svg";    
     }else {
-        navToggle.src = "../images/icon-hamburger.svg";
+        navToggle.src = "images/icon-hamburger.svg";
     }
 
 });
