@@ -247,8 +247,9 @@ section {
     max-width: 70%;
     margin: auto;
 }
-.faq .btn {
-    margin-top: 50px;
+
+.asked-q {
+    margin: 50px 0;
 }
 .question {
     border-top: 1px solid var(--verydarkblue-color);
@@ -266,8 +267,8 @@ section {
 
 .details {
     display: none;
-    padding-top: 30px;
-    line-height: 1.5;
+    padding-top: 50px;
+    line-height: 1.7;
     font-weight: 400;
     color: var(--greyishblue-color);
     
@@ -285,7 +286,7 @@ footer ul li a {
     color: var(--neutral-color);
 }
 .footer .stay {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 .footer #joined {
     font-size: 0.7em;
@@ -336,11 +337,12 @@ footer ul li a {
     padding: 1em 50px;
     
 }
-.bg-dark .logo{
+.bg-dark .logo {
     color: var(--neutral-color);
     padding: 0 2px;
     font-weight: 500;
     cursor: pointer;
+    margin-top: 8px;
 }
 .navbar-dark {
     background: linear-gradient(rgba(83, 104, 223, 0.8), rgba(83, 104, 223, 0.8));;
@@ -369,10 +371,7 @@ footer ul li a {
     main {
         padding: 10px 5%;
     }
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+
     .flex {
         flex-wrap: wrap;
         justify-content: center;
@@ -421,25 +420,16 @@ footer ul li a {
     .navbar ul {
         flex-direction: column; 
     }
+
     .logo {
         align-self: flex-start;
     }
     .hamburger {
         display: initial;
         align-self: flex-end;
-        margin-top: -20px;
+        margin-top: -30px;
     }
-    .one-click, .simple-bookmark {
-        justify-self: center;
-        text-align: center;
-        margin-top: 40px;
-    }
-    .bookmark {
-        padding-top: 120px;
-    }
-    .bookmark .simple-bookmark {
-        order: 1;
-    }
+
     section {
         padding: 4em 20px;
     }
@@ -488,7 +478,8 @@ footer ul li a {
 
     .form-input {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        margin-right: 10px;
     }
 
     .footer-bar .nav-link {
@@ -496,6 +487,7 @@ footer ul li a {
     }
     .bg-dark .logo {
         margin-bottom: 20px;
+        /* margin-top: 0; */
     }
 
     .nav-toggleShow {
@@ -508,6 +500,28 @@ footer ul li a {
     }
 }
 
+@media (max-width: 967px) {
+
+        .grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .one-click, .simple-bookmark {
+            justify-self: center;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .bookmark {
+            padding-top: 120px;
+        }
+        .bookmark .simple-bookmark {
+            order: 1;
+        }
+
+        
+}
+
 @media (max-width: 1120px) {
     .button {
         display: flex;
@@ -518,6 +532,14 @@ footer ul li a {
     .button .btn{
         margin-top: 20px;
     }
+
+    .features button {
+        padding: 20px 0;
+    }
+
+    /* .bookmark, .tab {
+        grid-template-columns: 1fr;
+    } */
 
     /* .features .features-link {
         display: flex; 
