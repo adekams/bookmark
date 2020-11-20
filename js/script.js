@@ -57,7 +57,7 @@ const thirdTab = document.querySelector('#third-tab')
 
 
 const openTabOne = () => {
-    tab1.style.display = 'grid';
+    tab1.style.display = 'flex';
     tab2.style.display = 'none';
     tab3.style.display = 'none';
 
@@ -68,7 +68,7 @@ const openTabOne = () => {
 
 const openTabTwo = () => {
     tab1.style.display = 'none';
-    tab2.style.display = 'grid';
+    tab2.style.display = 'flex';
     tab3.style.display = 'none';
 
     firstTab.style.borderBottom = 'none';
@@ -79,7 +79,7 @@ const openTabTwo = () => {
 const openTabThree = () => {
     tab1.style.display = 'none';
     tab2.style.display = 'none';
-    tab3.style.display = 'grid';
+    tab3.style.display = 'flex';
 
     firstTab.style.borderBottom = 'none';
     secondTab.style.borderBottom = 'none';
